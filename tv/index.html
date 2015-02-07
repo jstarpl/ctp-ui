@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="styl-ctp-ciemny.css" />
+<script src="mc-1.4.5.js"></script>
+<script src="ui.js"></script>
+<title>03 TVP Info Łódź - Campus Television Platform</title>
+</head>
+<body>
+<div class="modal-shade"></div>
+<div id="watch" class="tv-section">
+	<div class="change-channel">
+		<h3>003</h3>
+		<h2>TVP Łódź</h2>
+	</div>
+	<div class="mini-epg">
+		<h3>003</h3>
+		<h2>TVP Łódź</h2>
+		<ul>
+			<li class="hot highlight">
+				<h4>Popołudnie z Telewizją Łódź</h4>
+				<p>16.30 - 18.00</p>
+			</li>
+			<li>
+				<h4>Łódzkie Wiadomości Dnia</h4>
+				<p>18.00 - 18.30</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="epg-frame" class="epg hidden">
+	<div id="channels-list-overlay">
+	</div>
+	<div class="timetable-left scroll" id="scroll-epg-left">
+	</div>
+	<div class="timetable-right scroll" id="scroll-epg-right">
+	</div>
+	<div id="scroll-window">
+		<table id="epg-timetable" class="timetable">
+			<thead>
+				<tr class="time">
+					<td class="filler"></td>
+					<td>11:00</td>
+					<td>11:30</td>
+					<td>12:00</td>
+					<td>12:30</td>
+					<td>13:00</td>
+					<td>13:30</td>
+					<td>14:00</td>
+					<td>14:30</td>
+					<td>15:00</td>
+					<td>15:30</td>
+					<td>16:00</td>
+					<td>16:30</td>
+					<td>17:00</td>
+					<td>17:30</td>
+					<td>18:00</td>
+					<td>18:30</td>
+					<td>19:00</td>
+					<td>19:30</td>
+					<td>20:00</td>
+					<td>20:30</td>
+					<td>21:00</td>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- channel-name table cells to be moved once js is initialized -->
+				<tr>
+					<td class="channel-name tvp1"><span>001</span>TVP1</td>
+					<td colspan="2">Laxatives: Yes or no?<p>By złapać, wciśnij OK</p></td>
+					<td colspan="4">To jest bardzo długi tytuł raz dwa trzy cztery pięć sześć siedem<p>By złapać, wciśnij OK</p></td>
+					<td colspan="3">Wiadomości<p>By złapać, wciśnij OK</p></td>
+					<td colspan="2" class="hot"><div id="wiadomosci-full-info" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.
+					</div><a href="#wiadomosci-full-info">Sport</a><p>By odtworzyć, wciśnij OK</p></td>
+					<td colspan="2">Pogoda</td>
+				</tr>
+				<tr>
+					<td class="channel-name tvp2"><span>002</span>TVP2</td>
+					<td colspan="1">Laxatives</td>
+					<td colspan="3">To jest bardzo długi tytuł raz dwa</td>
+					<td colspan="2">Wiadomości</td>
+					<td colspan="3"><div id="wiadomosci-full-info2" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.
+					</div><a href="#wiadomosci-full-info2">Sport</a></td>
+					<td colspan="1">Pogoda</td>
+				</tr>
+				<tr>
+					<td class="channel-name tvn"><span>003</span>TVN</td>
+					<td colspan="3">Laxatives</td>
+					<td colspan="3">To jest bardzo długi tytuł raz dwa</td>
+					<td colspan="4">Wiadomości</td>
+					<td colspan="3"><div id="wiadomosci-full-info3" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info3">Sport</a></td>
+					<td colspan="2">Pogoda</td>
+				</tr>
+				<tr>
+					<td class="channel-name tvp-info"><span>004</span>TVP Info Łódź</td>
+					<td colspan="4">Laxatives: Yes or no?</td>
+					<td colspan="5">To jest bardzo długi tytuł raz dwa trzy cztery pięć sześć siedem dziewięć...</td>
+					<td colspan="2">Wiadomości</td>
+					<td colspan="5"><div id="wiadomosci-full-info4" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info4">Sport</a></td>
+					<td colspan="2">Pogoda</td>
+				</tr>
+				<tr>
+					<td class="channel-name tvp-info"><span>005</span>TVP Info Łódź</td>
+					<td colspan="4">Laxatives: Yes or no?</td>
+					<td colspan="5">To jest bardzo długi tytuł raz dwa trzy cztery pięć sześć siedem dziewięć...</td>
+					<td colspan="2">Wiadomości</td>
+					<td colspan="5"><div id="wiadomosci-full-info4" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info4">Sport</a></td>
+					<td colspan="2">Pogoda</td>
+				</tr>
+				<tr>
+					<td class="channel-name tvp-info"><span>005</span>TVP Info Łódź</td>
+					<td colspan="4">Laxatives: Yes or no?</td>
+					<td colspan="5">To jest bardzo długi tytuł raz dwa trzy cztery pięć sześć siedem dziewięć...</td>
+					<td colspan="2">Wiadomości</td>
+					<td colspan="5"><div id="wiadomosci-full-info4" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info4">Sport</a></td>
+					<td colspan="2">Pogoda</td>
+				</tr>
+				<tr>
+					<td class="channel-name tvp-info"><span>005</span>TVP Info Łódź</td>
+					<td colspan="4">Laxatives: Yes or no?</td>
+					<td colspan="5">To jest bardzo długi tytuł raz dwa trzy cztery pięć sześć siedem dziewięć...</td>
+					<td colspan="2">Wiadomości</td>
+					<td colspan="5"><div id="wiadomosci-full-info4" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info4">Sport</a></td>
+					<td colspan="2">Pogoda</td>
+				</tr>
+				<tr>
+					<td class="channel-name tvp-info"><span>005</span>TVP Info Łódź</td>
+					<td colspan="4">Laxatives: Yes or no?</td>
+					<td colspan="5">To jest bardzo długi tytuł raz dwa trzy cztery pięć sześć siedem dziewięć...</td>
+					<td colspan="2">Wiadomości</td>
+					<td colspan="5"><div id="wiadomosci-full-info4" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info4">Sport</a></td>
+					<td colspan="2">Pogoda</td>
+				</tr>
+				<tr>
+					<td class="channel-name tvp-info"><span>005</span>TVP Info Łódź</td>
+					<td colspan="4">Laxatives: Yes or no?</td>
+					<td colspan="5">To jest bardzo długi tytuł raz dwa trzy cztery pięć sześć siedem dziewięć...</td>
+					<td colspan="2">Wiadomości</td>
+					<td colspan="5"><div id="wiadomosci-full-info4" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info4">Sport</a></td>
+					<td colspan="2">Pogoda</td>
+				</tr>
+				<tr>
+					<td class="channel-name tvp-info"><span>005</span>TVP Info Łódź</td>
+					<td colspan="4">Laxatives: Yes or no?</td>
+					<td colspan="5">To jest bardzo długi tytuł raz dwa trzy cztery pięć sześć siedem dziewięć...</td>
+					<td colspan="2">Wiadomości</td>
+					<td colspan="5"><div id="wiadomosci-full-info4" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info4">Sport</a></td>
+					<td colspan="2">Pogoda</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="lower-menu">
+		<ul>
+			<li class="green">Dzisiaj</li>
+			<li class="yellow">Więcej o audycji</li>
+			<li class="fastscroll">Zmień dzień</li>
+			<li class="blue">Szukaj</li>
+		</ul>
+	</div>
+</div>
+<div id="recordings-list" class="hidden">
+	<ul class="date-list">
+		<li class="hot">
+			<h2>21<span>kwietnia</span></h2>
+			<ul>
+				<li>
+					<h3>Gwiezdne Wojny: Powrót Jedi</h3>
+					<p class="additional-info">TVP 1</p>
+					<p class="description">Właściciel klubu ginie z ręki płatnego zabójcy. Bromskiemu udaje się schwytać
+	przestępcę. Następnego dnia zleceniodawca porywa Aleksa. Bromskiemu
+	zostaje postawione ultimatum: ma wypuścić zabójcę i wycofać oskarżenie.
+	Jeśli tego nie zrobi, Alex zginie.</p>
+					<p class="play-now">By odtworzyć, wciśnij OK</p>
+				</li>
+				<li>
+					<h3>Gwiezdne Wojny: Powrót Jedi</h3>
+					<p class="additional-info">TVP 1</p>
+					<p class="description">Relacja z przygotowań polskich piłkarzy do meczu towarzyskiego z Portugalią.</p>
+					<p class="play-now">By odtworzyć, wciśnij OK</p>
+				</li>
+				<li>
+					<h3>Gwiezdne Wojny: Powrót Jedi</h3>
+					<p class="additional-info">TVP 1</p>
+					<p class="description">Relacja z przygotowań polskich piłkarzy do meczu towarzyskiego z Portugalią.</p>
+					<p class="play-now">By odtworzyć, wciśnij OK</p>
+				</li>
+			</ul>
+		<li>
+		<li>
+			<h2>22<span>kwietnia</span></h2>
+			<ul>
+				<li>
+					<h3>Gwiezdne Wojny: Powrót Jedi</h3>
+					<p class="additional-info">TVP 1</p>
+					<p class="description">Relacja z przygotowań polskich piłkarzy do meczu towarzyskiego z Portugalią.</p>
+				</li>
+				<li>
+					<h3>Gwiezdne Wojny: Powrót Jedi</h3>
+					<p class="additional-info">TVP 1</p>
+					<p class="description">Relacja z przygotowań polskich piłkarzy do meczu towarzyskiego z Portugalią.</p>
+				</li>
+				<li>
+					<h3>Gwiezdne Wojny: Powrót Jedi</h3>
+					<p class="additional-info">TVP 1</p>
+					<p class="description">Relacja z przygotowań polskich piłkarzy do meczu towarzyskiego z Portugalią.</p>
+				</li>
+			</ul>
+		<li>
+		<li>
+			<h2>23<span>kwietnia</span></h2>
+			<ul>
+				<li>
+					<h3>Gwiezdne Wojny: Powrót Jedi</h3>
+					<p class="additional-info">TVP 1</p>
+					<p class="description">Relacja z przygotowań polskich piłkarzy do meczu towarzyskiego z Portugalią.</p>
+				</li>
+				<li>
+					<h3>Gwiezdne Wojny: Powrót Jedi</h3>
+					<p class="additional-info">TVP 1</p>
+					<p class="description">Relacja z przygotowań polskich piłkarzy do meczu towarzyskiego z Portugalią.</p>
+				</li>
+				<li>
+					<h3>Gwiezdne Wojny: Powrót Jedi</h3>
+					<p class="additional-info">TVP 1</p>
+					<p class="description">Relacja z przygotowań polskich piłkarzy do meczu towarzyskiego z Portugalią.</p>
+				</li>
+			</ul>
+		<li>
+	</ul>
+	<div class="lower-menu">
+		<ul>
+			<li class="red">Upuść</li>
+			<li class="yellow">Więcej o audycji</li>
+			<li class="fastscroll">Zmień dzień</li>
+			<li class="blue">Szukaj</li>
+		</ul>
+	</div>
+</div>
+<video src="http://212.51.216.109:8088/bysid/15" loop autoplay id="video-screen"></video>
+</body>
+</html>

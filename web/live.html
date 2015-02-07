@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="styl-ctp-ciemny.css" />
+<script src="mc-1.4.5.js"></script>
+<script src="mb.js"></script>
+<script src="ui.js"></script>
+<title>03 TVP Info Łódź - Campus Television Platform</title>
+</head>
+<body class="standard ogladaj epg">
+<header>
+<nav>
+    <h1>Campus Television Platform</h1>
+    <ul class="menu">
+        <li id="menu-live"><a href="#">Na żywo</a></li>
+        <li id="menu-epg"><a href="#">Program TV</a></li>
+        <li id="menu-rec"><a href="#">Nagrania</a></li>
+    </ul>
+</nav>
+</header>
+<div class="tv-section">
+    <div id="channel-up" class="channel-zap">
+    </div>
+    <div id="video-screen">
+    </div>
+    <div id="video-info">
+        <h3><span class="channel-number">03</span> TVP Info Łódź</h3>
+        <p class="description">Popołudnie z Telewizją Łódź</p>
+    </div>
+	<div id="channel-down" class="channel-zap">
+    </div>
+</div>
+<div id="epg-frame" class="epg mini-epg hidden">
+<div id="channels-list-overlay">
+<div class="channels-up scroll" id="scroll-channels-up"></div>
+<div class="channels-down scroll" id="scroll-channels-down"></div>
+</div>
+<div class="timetable-left scroll" id="scroll-epg-left"></div>
+<div class="timetable-right scroll" id="scroll-epg-right"></div>
+<div id="scroll-window" class="scroll-window">
+<table id="epg-timetable" class="timetable">
+    <thead>
+        <tr class="time">
+            <td class="filler"></td>
+            <td>11:00</td>
+            <td>11:30</td>
+            <td>12:00</td>
+            <td>12:30</td>
+            <td>13:00</td>
+            <td>13:30</td>
+            <td>14:00</td>
+            <td>14:30</td>
+            <td>15:00</td>
+            <td>15:30</td>
+            <td>16:00</td>
+            <td>16:30</td>
+            <td>17:00</td>
+            <td>17:30</td>
+            <td>18:00</td>
+			<td>18:30</td>
+			<td>19:00</td>
+			<td>19:30</td>
+			<td>20:00</td>
+			<td>20:30</td>
+			<td>21:00</td>
+        </tr>
+    </thead>
+    <tbody>
+		<!-- channel-name table cells to be moved once js is initialized -->
+        <tr>
+            <td class="channel-name"><img src="logos/tvp1.png" width="87" height="61" alt="TVP 1"/>TVP1</td>
+            <td colspan="2">Laxatives: Yes or no?</td>
+            <td colspan="4">To jest bardzo długi tytuł raz dwa trzy cztery pięć sześć siedem dziewięć...</td>
+			<td colspan="3">Wiadomości</td>
+			<td colspan="2"><div id="wiadomosci-full-info" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info">Sport</a></td>
+			<td colspan="2">Pogoda</td>
+        </tr>
+        <tr>
+            <td class="channel-name"><img src="logos/tvp2.png" width="87" height="61" alt="TVP 2"/>TVP2</td>
+			<td colspan="1">Laxatives</td>
+            <td colspan="3">To jest bardzo długi tytuł raz dwa</td>
+			<td colspan="2">Wiadomości</td>
+			<td colspan="3"><div id="wiadomosci-full-info2" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info2">Sport</a></td>
+			<td colspan="1">Pogoda</td>
+        </tr>
+        <tr>
+            <td class="channel-name"><img src="logos/tvn.png" width="87" height="61" alt="TVN"/>TVN</td>
+			<td colspan="3">Laxatives</td>
+            <td colspan="3">To jest bardzo długi tytuł raz dwa</td>
+			<td colspan="4">Wiadomości</td>
+			<td colspan="3"><div id="wiadomosci-full-info3" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info3">Sport</a></td>
+			<td colspan="2">Pogoda</td>
+        </tr>
+        <tr>
+            <td class="channel-name"><img src="logos/tvpinfo.png" width="87" height="61" alt="TVP Info Łódź"/>TVP Info Łódź</td>
+			<td colspan="4">Laxatives: Yes or no?</td>
+            <td colspan="5">To jest bardzo długi tytuł raz dwa trzy cztery pięć sześć siedem dziewięć...</td>
+			<td colspan="2">Wiadomości</td>
+			<td colspan="5"><div id="wiadomosci-full-info4" class="full-info"><h4><a href="#!hide-box">Sport</a></h4>Raz dwa trzy cztery. Pięć sześć siedem osiem dziewięć dziesięć jedenaście. Dwanaście trzynaście piętnaście.</div><a href="#wiadomosci-full-info4">Sport</a></td>
+			<td colspan="2">Pogoda</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div id="epg-preloader" class="epg-preloader">
+	<p>Przewiń tutaj aby załadować Program TV</p>
+	<div class="spinner"><div></div></div>
+</div>
+<footer>
+	<p class="app-name">Campus Television Platform</p>
+	<p>Copyright &copy; Jan Starzak 2012</p>
+</footer>
+</body>
+</html>
